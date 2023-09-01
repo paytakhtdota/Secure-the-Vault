@@ -14,50 +14,72 @@
         const firstNumber = (2 ** 3 + 2);
         const secondNumber = (Math.sqrt(1296) + 4);
         const thridNumber = (139 % 50)
-      //  alert(message + firstNumber + " - " + secondNumber + " - " + thridNumber);
+      //alert(message + firstNumber + " - " + secondNumber + " - " + thridNumber);
     </script>
+    <link rel="stylesheet" href="./style.css" type="stylesheet">
+
 </head>
 
 <body>
     <div class="container">
-        <h1>My First Bootstrap Page</h1>
-        <p>This part is inside a .container class.</p>
-        <p>The .container class provides a responsive fixed width container.</p>
-        
-<div class="row">
-     <div class="col-sm-3 bg-light ">
-
-        <img src="assets/lock.png" class="img-thumbnail mt-3" alt="Cinque Terre" >
-        <div class="input-group mt-3 mb-3">
-            <span class="input-group-text">PIN</span>
-            <input type="password" class="form-control " maxlength="2" required>
-          </div>
 
 
-     </div>
-     <div class="col-sm-3 bg-light ">
+        <div class="row">
+            <div class="col-sm-3 bg-light" id="firstPinContainer">
 
-        <img src="assets/lock.png" class="img-thumbnail mt-3" alt="Cinque Terre" >
-        <div class="input-group mt-3 mb-3">
-            <span class="input-group-text">PIN</span>
-            <input type="password" class="form-control " maxlength="2" required>
-          </div>
-
-
-     </div>
-     <div class="col-sm-3 bg-light ">
-
-        <img src="assets/lock.png" class="img-thumbnail mt-3" alt="Cinque Terre" >
-        <div class="input-group mt-3 mb-3">
-            <span class="input-group-text">PIN</span>
-            <input type="password" class="form-control " maxlength="2" required>
-          </div>
+                <img src="assets/lock.png" class="img-thumbnail mt-3" alt=" " id="firstLock">
+                <div class="input-group mt-3 mb-3">
+                    <span class="input-group-text">PIN</span>
+                    <input type="password" class="form-control " maxlength="2" id="pin1" required>
+                    <button onclick="evaluitInput1()" type="button" class="btn btn-primary"
+                        id="firstPinBtn">Enter</button>
+                </div>
 
 
-     </div>
-    
+            </div>
+            <div class="col-sm-3 bg-light " id="">
 
-    </div>
+                <img src="assets/lock.png" class="img-thumbnail mt-3" alt=" " id="secondLock">
+                <div class="input-group mt-3 mb-3">
+                    <span class="input-group-text">PIN</span>
+                    <input type="password" class="form-control " maxlength="2" id="pin2" required>
+                    <button onclick="evaluitInput2()" type="button" class="btn btn-primary"
+                        id="secondPinBtn">Enter</button>
+                </div>
+
+
+            </div>
+            <div class="col-sm-3 bg-light ">
+
+                <img src="assets/lock.png" class="img-thumbnail mt-3" alt=" " id="thirdLock">
+                <div class="input-group mt-3 mb-3">
+                    <span class="input-group-text">PIN</span>
+                    <input type="password" class="form-control " maxlength="2" id="pin3" required>
+                    <button onclick="evaluitInput3()" type="button" class="btn btn-primary"
+                        id="thirdPinBtn">Enter</button>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-sm-9 offset-sm-3">
+                <div class="input-group mt-3 mb-3">
+                    <button onclick="combinationOpener()" type="button" class="btn btn-info btn-lg" id="openIt" style="width: 310px;" disabled>Open
+                        it</button>
+                </div>
+
+            </div>
+
+            <div class="col-sm-3 offset-sm-3">
+
+                <img src="./assets/lock1.png" alt="Background Image" class="img-fluid" id="lastLock">
+                <img src="./assets/combination.png" alt="Background Image" class="img-fluid" style="z-index: 1; margin-top: -127%;">
+            </div>
+        </div>
+        <script src="script.js"></script>
 
 </body>
 
