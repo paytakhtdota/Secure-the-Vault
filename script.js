@@ -3,14 +3,14 @@ function openVault() {
     if (evaluitInput1() && evaluitInput2() && evaluitInput3()) {
         document.getElementById("openIt").disabled = false;
     }
-    else{
+    else {
         document.getElementById("openIt").disabled = true;
     }
 }
 
 function combinationOpener() {
-        document.getElementById("lastLock").src = "assets/unlock2.png";
-    }
+    document.getElementById("lastLock").src = "assets/unlock2.png";
+}
 
 function evaluitInput1() {
     let firstPin = document.getElementById("pin1").value;
@@ -83,7 +83,7 @@ function openVault() {
     if (evaluitInput1() && evaluitInput2() && evaluitInput3()) {
         document.getElementById("openIt").disabled = false;
     }
-    else{
+    else {
         document.getElementById("openIt").disabled = true;
     }
 }
@@ -115,8 +115,9 @@ rotateButton.addEventListener("click", () => {
                 performRotation(rotationsArray, index + 1);
             }, rotation.duration + 400); // 0.4 ثانیه مکث بین چرخش‌ها
         }
-        else if (index == rotationsArray.length){    rotateButton.addEventListener("click", document.getElementById("lastLock").src = "assets/unlock2.png");
-    }
+        else if (index == rotationsArray.length) {
+            rotateButton.addEventListener("click", document.getElementById("lastLock").src = "assets/unlock2.png");
+        }
     }
 
     // شروع اجرای توالی چرخش‌ها
